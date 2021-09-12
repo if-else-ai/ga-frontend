@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 import Reproduce from "./contents/Reproduce";
 import About from "./contents/About";
 import Home from "./contents/Home";
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/About">
           <About />
         </Route>
+        <Footer />
       </div>
     </Router>
   );
