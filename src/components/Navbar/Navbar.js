@@ -12,9 +12,11 @@ class Navbar extends Component {
   render() {
     return (
       <nav className="NavbarItems">
-        <h1 className="navbar-logo">
-          <i className="fas fa-dna"></i> Genetic Algorithm
-        </h1>
+        <a href="/" className="navbar-logo">
+          <h1>
+            <i className="fas fa-dna"></i> Genetic Algorithm
+          </h1>
+        </a>
         <div className="menu-icon" onClick={this.handleClick}>
           <i
             className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}

@@ -2,11 +2,7 @@ import React, { Component } from "react";
 
 class Reproduce extends Component {
   render() {
-    return (
-      <div>
-        <h1>Reproduce</h1>
-      </div>
-    );
+    return <div className="page">รูปป</div>;
   }
 }
 

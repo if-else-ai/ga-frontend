@@ -5,7 +5,7 @@ export const MenuItems = [
     cName: "nav-links",
   },
   {
-    title: "Reproduce Image",
+    title: "Reproduce-Image",
     url: "/Reproduce",
     cName: "nav-links",
   },
