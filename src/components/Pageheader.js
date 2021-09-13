@@ -6,6 +6,7 @@ class Pageheader extends Component {
     return (
       <div>
         <div className="page-header">
+        {/* <div> */}
           <p>
            💡 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
