@@ -1,9 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
+import HeroSection from "../components/HeroSection";
 
-class Home extends Component {
-    render() {
-        return <div className = "page" > โ ฮ ม ฟ้ า < /div>;
-    }
+function Home() {
+  return (
+    <>
+      <HeroSection />
+    </>
+  );
 }
 
 export default Home;
