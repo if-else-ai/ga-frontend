@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./pages.css";
 
 class About extends Component {
-<<<<<<< HEAD
     render() {
         return ( <
             div className = "page" >
@@ -13,16 +12,6 @@ class About extends Component {
             /div>
         );
     }
-=======
-  render() {
-    return (
-      <div className="page">
-        <h1>โหลเทส</h1>
-        about อะเบ้าาา
-      </div>
-    );
-  }
->>>>>>> b77b84c58832980b89513cc52ad27fb55e0f6f12
 }
 
 export default About;
