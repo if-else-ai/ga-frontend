@@ -6,8 +6,9 @@ class About extends Component {
         return ( <
             div className = "page" >
             <
-            h1 > ฟ้ าทำอะเบ้ า < /h1>
-            about อะเบ้ าาา <
+            h1 > OBJECTIVE < /h1>{" "} <
+            h3 > Create a new image using Genetic Algorithm. < /h3>{" "} <
+            h3 > Research and understanding how Genetic Algorithm works. < /h3>{" "} <
             /div>
         );
     }
