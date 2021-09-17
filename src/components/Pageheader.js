@@ -1,12 +1,9 @@
-import React, { Component } from "react";
 import "./Pageheader.css";
 
-class Pageheader extends Component {
-  render() {
+  const Pageheader = () => {
     return (
       <div>
         <div className="page-header">
-        {/* <div> */}
           <p>
            💡 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -20,6 +17,5 @@ class Pageheader extends Component {
       </div>
     );
   }
-}
 
 export default Pageheader;

@@ -16,12 +16,13 @@
 }
 
 .container-text {
-  /* height: 100vh; */
-  width: 50%;
-  /* display: flex; */
+  margin-top: 30px;
+  height: 100vh;
+  width: 70%;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
-  /* align-items: center; */
+  /* justify-content: center; */
+  align-items: center;
   /* object-fit: contain; */
   color: #fff;
 }

@@ -2,7 +2,7 @@ import React from "react";
 import HeroSection from "../components/HeroSection/HeroSection";
 import Home2 from "../components/Home2/Home2";
 
-function Home() {
+const Home = () => {
   return (
     <>
       <HeroSection />

@@ -1,9 +1,7 @@
-import React, { Component } from "react";
 import "./Member.css";
 import MemberCard from "./Membercard"
 
-class Member extends Component {
-	render() {
+	const Member = () => {
 		return (
 			<div className="member">
 				<h1> DEVELOPER </h1>
@@ -11,6 +9,5 @@ class Member extends Component {
 			</div>
 		);
 	}
-}
 
 export default Member;
