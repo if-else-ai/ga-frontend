@@ -6,11 +6,9 @@ class Footer extends Component {
     return (
       <div className="footer">
         <div id="container">
-          <div id="container">
-            <h2>KMITL</h2>
-            <h2>KMITL</h2>
-            <h2>KMITL</h2>
-          </div>
+          <h2>KMITL</h2>
+          <h2>KMITL</h2>
+          <h2>KMITL</h2>
         </div>
       </div>
     );
