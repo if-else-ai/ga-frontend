@@ -5,10 +5,7 @@ class Membercard extends Component {
 	render() {
 		return (
 			<div className="">
-				<h1> DEVELOPER </h1>
-	
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png" alt="Cinque Terre" width="600" height="400"></img>
-       
+            	<img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png" alt="Cinque Terre" width="600" height="400"></img>
 			</div>
 			
 		);
