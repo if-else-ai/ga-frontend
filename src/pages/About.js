@@ -1,23 +1,13 @@
 import React from "react";
 import "./pages.css";
 import "./About.css";
-import Member from "../components/Member";
+import Member from "../components/About/Member";
+import Objective from "../components/About/Objective";
 
 const About = () => {
 	return (
 		<div className="page">
-			<h1> OBJECTIVE </h1>
-			<ul>
-				<li>
-					<h3> Create a new image using Genetic Algorithm. </h3>
-				</li>
-				<li>
-					<h3>
-						{" "}
-						Research and understanding how Genetic Algorithm works.{" "}
-					</h3>
-				</li>
-			</ul>
+			<Objective />
 			<Member />
 		</div>
 	);

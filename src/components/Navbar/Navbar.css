@@ -82,6 +82,7 @@
   }
 
   .nav-links {
+    font-weight: bold;
     text-align: center;
     padding: 2rem;
     width: 100%;
@@ -90,6 +91,7 @@
 
   .nav-links:hover {
     background-color: #7577fa;
+    font-weight: bold;
     border-radius: 0;
   }
 

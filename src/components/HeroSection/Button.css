@@ -3,8 +3,10 @@
 }
 
 .btn {
+  width: 200px;
+  font-weight: bold;
   padding: 8px 20px;
-  border-radius: 2px;
+  border-radius: 5px;
   outline: none;
   border: none;
   cursor: pointer;
@@ -20,7 +22,7 @@
   background-color: transparent;
   color: #fff;
   padding: 8px 20px;
-  border: 1px solid var(--primary);
+  border: 3px solid var(--primary);
   transition: all 0.3s ease-out;
 }
 
@@ -37,7 +39,8 @@
 .btn--large:hover,
 .btn--medium:hover {
   transition: all 0.3s ease-out;
-  background: #fff;
-  color: #242424;
+  background: #242424;
+  color: #fff;
+  border-color: #242424;
   transition: 250ms;
 }

@@ -1,13 +1,13 @@
 import React from "react";
 import HeroSection from "../components/HeroSection/HeroSection";
-import Home2 from "../components/Home2/Home2";
+import HomeBody from "../components/HomeBody/HomeBody";
 
 const Home = () => {
   return (
-    <>
+    <div>
       <HeroSection />
-      <Home2 />
-    </>
+      <HomeBody />
+    </div>
   );
 }
 

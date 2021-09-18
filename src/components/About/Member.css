@@ -1,0 +1,29 @@
+.member {
+    margin: 20px 0;
+}
+.member > h1{
+    margin: 20px 0;
+}
+
+.member__items {
+    padding: 0px 40px;
+}
+
+.member__item {
+    display: inline-block;
+    margin: 12px 12px;
+    align-content: space-around;
+}
+
+.member__item img {
+    border-radius: 10px 10px 0px 0px;
+    width: inherit;
+    height: 250px;
+    object-fit: cover;
+}
+
+.member__item p {
+    font-weight: bold;
+}
+
+

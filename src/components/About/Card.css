@@ -1,0 +1,16 @@
+.member-card{
+    width: 320px;
+    height: 450px;
+    background-color: rgb(166, 210, 255);
+    border-color: black;
+    border-width: 10px;
+    border-radius: 10px;
+}
+
+.member-card > p{
+    padding: 0 16px
+}
+
+
+
+

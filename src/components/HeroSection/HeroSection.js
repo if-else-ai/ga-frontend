@@ -17,7 +17,7 @@ const HeroSection = () =>  {
           buttonStyle="btn--primary"
           buttonSize="btn--large"
         >
-          Get Start
+          Get Started
         </Button>
       </div>
     </div>
