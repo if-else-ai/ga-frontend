@@ -10,20 +10,52 @@
 }
 
 .member__item {
+    position: relative;
     display: inline-block;
     margin: 12px 12px;
     align-content: space-around;
+    vertical-align: middle;
+
 }
 
 .member__item img {
+    margin:0 ;
     border-radius: 10px 10px 0px 0px;
     width: inherit;
-    height: 250px;
+    height: 280px;
     object-fit: cover;
 }
 
 .member__item p {
     font-weight: bold;
+}
+
+.card-text {
+    margin: 0 10px;
+}
+
+.chip__items {
+    margin-left: 10px;
+}
+
+.chip__item{
+    display: inline-block;
+    margin: 0 4px 4px 0;
+}
+.chip__item > span{
+    background-color: rgb(153, 153, 153);
+    color: white;
+    border-radius: 6px;
+}
+
+.card-id{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 10px 4px 0;;
+    align-self: end;
+    font-weight: bold;
+    margin-left: 4px;
 }
 
 
