@@ -14,24 +14,32 @@
     display: inline-block;
     margin: 12px 12px;
     align-content: space-around;
-    vertical-align: middle;
-
 }
 
-.member__item img {
-    margin:0 ;
+.member__image{
+    object-fit: contain;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(56, 56, 56);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.member__image > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 10px 10px 0px 0px;
-    width: inherit;
     height: 280px;
-    object-fit: cover;
+    object-fit: contain;
 }
+
 
 .member__item p {
     font-weight: bold;
 }
 
 .card-text {
-    margin: 0 10px;
+    margin: 4px 10px 0 10px;
 }
 .card-text p:first-child {
     font-size: 18px;

@@ -1,4 +1,6 @@
 .member-card{
+    overflow: hidden;
+
     width: 320px;
     height: 450px;
     /* background-color: rgb(166, 210, 255); */
