@@ -14,7 +14,7 @@ const Member = () => {
 				{Team.map((item, index) => {
 					return (
 						<div className="member__item" key={index}>
-							<Card >
+							<Card isPM={item.isPM} >
 								<img src={item.image} alt="team" />
 								<div className="card-text">
 									<p>Name : {item.name}</p>

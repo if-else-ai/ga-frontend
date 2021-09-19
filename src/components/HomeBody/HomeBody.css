@@ -29,6 +29,7 @@
 }
 
 .container-text > p {
+  text-indent: 100px;
   font-size: 20px;
   line-height: 1.8;
 }

@@ -33,6 +33,13 @@
 .card-text {
     margin: 0 10px;
 }
+.card-text p:first-child {
+    font-size: 18px;
+}
+
+.card-text > p {
+    font-size: 16px;
+}
 
 .chip__items {
     margin-left: 10px;
@@ -40,10 +47,13 @@
 
 .chip__item{
     display: inline-block;
-    margin: 0 4px 4px 0;
+    margin: 4px 4px 4px 0;
 }
 .chip__item > span{
-    background-color: rgb(153, 153, 153);
+    font-weight: bold;
+    font-family: Helvetica;
+    padding: 4px 16px;
+    background-color: rgb(165, 97, 255);
     color: white;
     border-radius: 6px;
 }
@@ -52,7 +62,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    margin: 0 10px 4px 0;;
+    margin: 0 10px 4px 0;
     align-self: end;
     font-weight: bold;
     margin-left: 4px;
