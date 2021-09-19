@@ -48,7 +48,7 @@ export const Team = [
 	{
 		id: "62050163",
 		name: "Thirawat Phongsathatkit",
-		role: ["Head of Design UX/UI Department", "Front-end", "Python-GA"],
+		role: ["Head of UX/UI Design Department", "Front-end", "Python-GA"],
 		image: "/images/contributor/Natthadecha.jpg",
 		isPM: false
 
