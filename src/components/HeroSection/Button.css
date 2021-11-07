@@ -36,9 +36,11 @@
   font-size: 20px;
 }
 
+
+
 .btn--large:hover,
 .btn--medium:hover {
-  transition: all 0.3s ease-out;
+  transition: all 0.3s ease-in-out;
   background: #242424;
   color: #fff;
   border-color: #242424;

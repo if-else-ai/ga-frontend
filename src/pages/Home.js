@@ -4,7 +4,7 @@ import HomeBody from "../components/HomeBody/HomeBody";
 
 const Home = () => {
   return (
-    <div>
+    <div className="home">
       <HeroSection />
       <HomeBody />
     </div>

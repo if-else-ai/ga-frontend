@@ -1,5 +1,5 @@
-.sub-button__main {
-    display: block;
+.button__upload {
+    display: flex;
     margin-top: 16px;
     margin-left: auto;
     margin-right: auto;
@@ -7,7 +7,14 @@
     font-weight: bold;
     font-size: 16px;
     border: none;
-    border-radius: 10px;
-    background-color: rgb(150, 111, 153);
+    border-radius: 6px;
+    background-color: rgb(123, 66, 255);
     color: white;
+    cursor: pointer;
 }
+
+.button__upload:hover {
+    background-color: #1520c0;
+    transition: all 0.3s ease-in;
+}
+
