@@ -21,7 +21,16 @@ const Home2 = () => {
           different solution strategies. Experiments show the DFE is effective
           in accelerating different applications that apply genetic algorithms.
         </p>
+
+    
+    
+        
       </div>
+
+      <div className = "img_cycle" >
+        <img src="/images/contributor/natuaral.jpg"  width="600px" ></img>
+        <p>The cycle of natural evolution</p>
+    </div>
     </div>
   );
 }
