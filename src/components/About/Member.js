@@ -28,7 +28,6 @@ const Member = () => {
 											<div className="chip__item" key={index}>
 												<span>
 													{item}
-													<br />
 												</span>
 											</div>
 										);
