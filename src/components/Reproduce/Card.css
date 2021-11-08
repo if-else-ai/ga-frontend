@@ -1,9 +1,16 @@
-.card {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 400px;
-    height: 400px;
-    background-color: rgb(218, 218, 218);
-    border-radius: 8px;
+.card-container {
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
 }
+
+.card-container img {
+    min-width: 400px;
+    min-height: 400px;
+
+    max-height: 800px;
+    max-width: 800px;
+    padding: 4px;
+    border: 4px dashed rgb(180, 180, 243)
+}
+
