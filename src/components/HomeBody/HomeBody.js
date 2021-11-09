@@ -301,7 +301,7 @@ const Home2 = () => {
                   ></img>
                 </div> 
                 <h1>Calculate Some Statistics</h1>
-
+                  <p>Here is some information about the best solution.</p>
                 <div className="code6">
                   <span className="code6-comment"><span className="b"># Returning the details of the best solution.</span></span>
                   <span className="code6-var">solution, solution_fitness, solution_idx = ga_instance.best_solution()</span>
@@ -318,8 +318,6 @@ const Home2 = () => {
                   <h1>Evolution by Generation</h1> 
                   <p>The solution reached after the 20,000 generations is shown below.</p>         
 
-    
-                
                 <div className="img">
                   <img 
                     src="/images/contributor/repro-fruit.png" 
