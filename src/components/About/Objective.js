@@ -7,8 +7,7 @@ const Objective = () => {
 			<h1> OBJECTIVE </h1>
 			<ul>
 				<li>
-					<h3>To propose strategies for applying genetic algorithms. That have evolved working together (Co-Operative Co-Evolution Genetic Algorithm) 
-					with Technical indicators to create a stock trading strategy to focus on finding the highest return on investing in the stock market.
+					<h3>To propose strategies for applying genetic algorithms to create a stock trading strategy. 
 					</h3>
 				</li>
 				<li>
@@ -18,17 +17,22 @@ const Objective = () => {
 				</li>
 				<li>
 					<h3>
-					Create a new image using Genetic Algorithm. 
+					Research on image reproduction algorithm using genetic algorithm
 					</h3>
 				</li>
 				<li>
 					<h3>
-					To find the mathematical equations in the image transformation.
+					Experiment with reproducing images using Genetic algorithm.
 					</h3>
 				</li>
 				<li>
 					<h3>
-					The genetic method is easy to apply and the most suitable answer can be obtained.
+					Learn each generation to see how the images come out.
+					</h3>
+				</li>
+				<li>
+					<h3>
+					Find the most suitable or closest solution using a genetic algorithm.
 					</h3>
 				</li>
 			</ul>

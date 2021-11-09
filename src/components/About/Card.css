@@ -1,6 +1,5 @@
 .member-card {
   overflow: hidden;
-
   width: 20rem;
   height: 30rem;
   /* background-color: rgb(166, 210, 255); */
@@ -15,14 +14,12 @@
 }
 
 .team-member {
-  background-size: contain;
-  background-image: url("Star.png");
+  /* background-size: contain; */
   background-color: rgb(240, 240, 240);
 }
 
 .project-manager {
-  background-size: contain;
-  background-image: url("Star.png");
+  /* background-size: contain; */
   background-color: rgb(255, 243, 209);
 }
 
