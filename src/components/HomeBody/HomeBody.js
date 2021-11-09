@@ -24,7 +24,7 @@ const Home2 = () => {
 							width="600px"
 							alt=""
 						></img>
-						<p>The cycle of natural evolution</p>  
+						<i>The cycle of natural evolution</i>  
 					</div>
         <p>GA aims to enable computers to solve problems using natural methods. 
           It works with binary bit strings (called chromosomes), in which each chromosome contains a gene. 
