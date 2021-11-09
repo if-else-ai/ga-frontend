@@ -21,8 +21,8 @@ const Home2 = () => {
 					<div className="img">
 						<img
 							src="/images/contributor/natuaral.jpg"
+              alt=""
 							width="600px"
-							alt=""
 						></img>
 						<i>The cycle of natural evolution</i>  
 					</div>
@@ -58,6 +58,7 @@ const Home2 = () => {
                     <div className="img">
                       <img 
                         src="/images/contributor/chomosome.jpg" 
+                        alt=""
                         width="600px"
                       ></img>
                     </div>
@@ -115,6 +116,7 @@ const Home2 = () => {
               <div className="img">
                 <img className="img-crossver"
                   src="/images/contributor/Crossover1000.gif" 
+                  alt=""
                   width="800px">
                 </img>
               </div>
@@ -133,6 +135,7 @@ const Home2 = () => {
                 <div className="img">
                   <img className="img-mutation"
                     src="/images/contributor/Mutation1001.gif" 
+                    alt=""
                     width="800px"
                   ></img>
                 </div>
@@ -200,6 +203,7 @@ const Home2 = () => {
                 <div className="img">
                   <img 
                     src="/images/contributor/fruit.jpg" 
+                    alt=""
                     width="450px"
                   ></img>
                 </div>
@@ -297,6 +301,7 @@ const Home2 = () => {
                 <div className="img">
                   <img 
                     src="/images/contributor/plot.png" 
+                    alt=""
                     width="500px"
                   ></img>
                 </div> 
@@ -321,6 +326,7 @@ const Home2 = () => {
                 <div className="img">
                   <img 
                     src="/images/contributor/repro-fruit.png" 
+                    alt=""
                     width="500px"
                   ></img>
                 </div>

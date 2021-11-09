@@ -18,8 +18,11 @@ const ReproduceBody = () => {
 	let [filename, setFilename] = useState("");
 	let [fitness, setFitness] = useState(0)
 	let [generated, setGenerated] = useState(0)
-	let [status, setStatus] = useState('')
+	let [status, setStatus] = useState('Waiting')
 	let [imageArray, setImageArray] = useState([])
+	let [imageAnimationIndex, setImageAnimationIndex] = useState(0)
+	let [finishGenerate, setFinishGenerate] = useState(false)
+	let animationIndex = 0
 	var intervalID
 
 	
@@ -105,18 +108,51 @@ const ReproduceBody = () => {
 				setFitness(res.data.current_fitness)
 				setGenerated(res.data.current_generation)
 				setStatus(res.data.status)
-				setImageArray(res.data.sol_img)
-				console.log((res.data.status === 'Completed'))
-				if(res.data.status === 'Completed'){
+				console.log('array',res.data.sol_im)
+				let imageData = res.data.sol_im
+				let imageArray = imageData.map(
+					imageFilename => {
+						return `${axios.defaults.baseURL}/image?filename=${imageFilename}`}
+				)
+				console.log(imageArray)
+				setImageArray(imageArray)
+				console.log(res)
+				if(res.data.status === 'Completed' || res.data.state === "FAILURE"){
+					axios.post(`/tasks/${taskID}`).then(
+						res => {
+							console.log('clear', taskID)
+						}
+					)
 					clearInterval(intervalID)
+					setFinishGenerate(true)
+					setInterval(()=>{
+						playAnimation()
+					},1000)
 				}
 			}
 		)
 	};
 
-	// const fetchStatus = () => {
-		
-	// }
+	let animation = (
+		<p>waiting</p>
+	)
+
+	if(finishGenerate){
+		animation = 
+		(
+			<div className="image__animation-container">
+				<p>Progression Animation</p>
+				<ImageCard  item={imageArray[imageAnimationIndex % imageArray.length]} generation={(generation/split)*((imageAnimationIndex % imageArray.length) + 1)}/>
+				<p></p>
+			</div>
+		)
+	}
+
+	const playAnimation = () => {
+		animationIndex += 1
+		setImageAnimationIndex(imageAnimationIndex + animationIndex)
+		console.log(animationIndex)
+	}
 
 	return (
 		<div className="reproduce__container">
@@ -149,25 +185,32 @@ const ReproduceBody = () => {
 				</button>
 			</div>
 
-			<p>Generated Picture:</p>
 
 			<div>
 				<p>Current Generation: {generated}</p>
 				<p>Fitness: {fitness}</p>
 				<p>Status: {status}</p>
 			</div>
+			
+			{animation}
 
+			<p>Generated Picture</p>
 			<div className="image__items">
 				{imageArray.map((item, index) => {
 					return (
 						<ImageCard
 							key={index}
 							item={item}
-							generation={(generation/split)*index}
+							generation={(generation/split)*(index + 1)}
 						/>
 					);
 				})}
 			</div>
+
+			
+			
+			
+
 		</div>
 	);
 };
