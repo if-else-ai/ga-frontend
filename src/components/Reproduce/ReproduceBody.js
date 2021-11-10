@@ -7,10 +7,11 @@ import "./Button.css";
 import axios from "../../axios.js";
 
 const ReproduceBody = () => {
+
 	// target hidden input
 	const fileInputRef = useRef(null);
 
-	// form input
+	// state variable
 	let [haveImage, setHaveImage] = useState(false);
 	let [generation, setGeneration] = useState(0);
 	let [split, setSplit] = useState(0);
@@ -25,46 +26,44 @@ const ReproduceBody = () => {
 	let animationIndex = 0
 	var intervalID
 
-	
+	// click hidden file input if button is click
 	const uploadClickHandler = (event) => {
 		fileInputRef.current.click();
 	};
 
 	// upload image
-	// then get image
 	const uploadHandler = (event) => {
+		// use form0-data to store image
 		const file = event.target.files[0];
-		let formData = new FormData();
-
-		let tempBlob = new Blob([file], { type: "image/jpeg" });
-		formData.append("file", tempBlob, file.name);
-		axios
-			.post("/image", formData, {
-				headers: {
-					"Content-Type": "multipart/form-data",
-				},
-			})
-			.then((res) => {
-				console.log(res)
-				filename = res.data.filename
-				let currentImage = `${axios.defaults.baseURL}/image?filename=${filename}`;
-				setFilename(filename)
-				setImageURL(currentImage)
-				setHaveImage(true);
-			})
-			.catch((err) => {
-				console.log(err);
-				alert("เกิดข้อผิดพลาด");
-			});
-
+		console.log(file)
+		if(file){
+			let formData = new FormData();
+			let tempBlob = new Blob([file], { type: "image/jpeg" });
+			formData.append("file", tempBlob, file.name);
+			// upload api
+			axios
+				.post("/image", formData, {
+					headers: {
+						"Content-Type": "multipart/form-data",
+					},
+				})
+				.then((res) => {
+					console.log(res)
+					filename = res.data.filename
+					let currentImage = `${axios.defaults.baseURL}/image?filename=${filename}`;
+					setFilename(filename)
+					setImageURL(currentImage)
+					setHaveImage(true);
+				})
+				.catch((err) => {
+					console.log(err);
+					alert("เกิดข้อผิดพลาด");
+				});
+		}
 	};
 
+	// run task
 	const startHandler = () => {
-		console.log({
-					filename: filename,
-					generation: Number(generation),
-					split: Number(split)
-				})
 		axios
 			.post(
 				"/run",
@@ -77,18 +76,14 @@ const ReproduceBody = () => {
 			.then((res) => {
 				console.log(res)
 				let taskID = res.data.task_id
-				// start getting status
+
+				// start getting status every 2 second
 				intervalID = setInterval(() => {
 					fetchStatus(taskID)
 				}, 2000);
 
-				// setTimeout(() => {
-				// undo fetchStatus
-				// 	clearInterval(intervalID)
-				// },4000)
 			})
 			.catch((err) => {
-				// this.$refs.fileInput.remove();
 				console.log(err);
 			});
 
@@ -133,10 +128,19 @@ const ReproduceBody = () => {
 		)
 	};
 
-	let animation = (
-		<p>waiting</p>
-	)
 
+	
+
+
+	const playAnimation = () => {
+		animationIndex += 1
+		setImageAnimationIndex(imageAnimationIndex + animationIndex)
+	}
+
+	let animation = (
+		<p>Animation: waiting</p>
+	)
+	
 	if(finishGenerate){
 		animation = 
 		(
@@ -148,11 +152,27 @@ const ReproduceBody = () => {
 		)
 	}
 
-	const playAnimation = () => {
-		animationIndex += 1
-		setImageAnimationIndex(imageAnimationIndex + animationIndex)
-		console.log(animationIndex)
+	let generatedImage = <p></p>;
+
+	if(finishGenerate){
+		generatedImage = (
+			<section>
+				<p>Generated Picture</p>
+				<div className="image__items">
+					{imageArray.map((item, index) => {
+						return (
+							<ImageCard
+								key={index}
+								item={item}
+								generation={(generation/split)*(index + 1)}
+							/>
+						);
+					})}
+				</div>
+			</section>
+		)
 	}
+
 
 	return (
 		<div className="reproduce__container">
@@ -194,20 +214,7 @@ const ReproduceBody = () => {
 			
 			{animation}
 
-			<p>Generated Picture</p>
-			<div className="image__items">
-				{imageArray.map((item, index) => {
-					return (
-						<ImageCard
-							key={index}
-							item={item}
-							generation={(generation/split)*(index + 1)}
-						/>
-					);
-				})}
-			</div>
-
-			
+			{generatedImage}
 			
 			
 

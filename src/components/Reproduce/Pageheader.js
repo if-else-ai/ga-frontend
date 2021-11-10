@@ -4,15 +4,26 @@ import "./Pageheader.css";
     return (
       <div>
         <div className="page-header">
-          <p>
-           💡 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          <h3>How to use Reproduce Image</h3>
+          <ol>
+            <li>
+              Insert Image (bigger image resolution = more processing time)
+            </li>
+            <li>
+              Insert your desire Generation (The better Generation value mean the better image and more time processing)
+            </li>
+            <li>
+              Insert split (split mean how many image you want to split into)
+            </li>
+            <li>
+              Wait for Server to process your image (may take a lot of time ,roughly 5 generation per second )
+            </li>
+            <li>
+             At the end the animation will be shown to show how the generation progression looks like
+            </li>
+          </ol>
+          <p>*Better try generate small Generation first to see how its will look like</p>
+          <p>*Don't forget to start backend server! </p>
         </div>
       </div>
     );
