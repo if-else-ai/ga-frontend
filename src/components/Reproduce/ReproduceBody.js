@@ -154,7 +154,7 @@ const ReproduceBody = () => {
 
 	let generatedImage = <p></p>;
 
-	if(finishGenerate){
+	if(finishGenerate || imageArray.length > 0){
 		generatedImage = (
 			<section>
 				<p>Generated Picture</p>
