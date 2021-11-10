@@ -157,7 +157,7 @@ const ReproduceBody = () => {
 	if(finishGenerate || imageArray.length > 0){
 		generatedImage = (
 			<section>
-				<p>Generated Picture</p>
+				<p>Generated Image</p>
 				<div className="image__items">
 					{imageArray.map((item, index) => {
 						return (
